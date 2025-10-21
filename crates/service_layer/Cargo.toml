@@ -1,0 +1,30 @@
+[package]
+name = "service_layer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Local crates
+common = { path = "../common" }
+models = { path = "../models" }
+db = { path = "../db" }
+auth = { path = "../auth" }
+
+# Async runtime
+tokio.workspace = true
+async-trait.workspace = true
+
+# Database
+sea-orm.workspace = true
+
+# Utilities
+uuid.workspace = true
+
+# Logging
+tracing.workspace = true
+
+# Validation
+validator.workspace = true
+

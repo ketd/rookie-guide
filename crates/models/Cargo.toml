@@ -1,0 +1,25 @@
+[package]
+name = "models"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Serialization
+serde.workspace = true
+serde_json.workspace = true
+
+# OpenAPI 文档
+utoipa.workspace = true
+
+# Database
+sea-orm.workspace = true
+
+# Utilities
+uuid.workspace = true
+chrono.workspace = true
+
+# Validation
+validator.workspace = true
+
