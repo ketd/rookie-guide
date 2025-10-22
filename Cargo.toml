@@ -1,0 +1,61 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/api",
+    "crates/service_layer",
+    "crates/models",
+    "crates/db",
+    "crates/auth",
+    "crates/common",
+    "crates/migration",
+]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+authors = ["Rookie Guide Team"]
+license = "MIT"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.40", features = ["full"] }
+async-trait = "0.1"
+
+# Web framework
+axum = { version = "0.7", features = ["macros"] }
+tower = "0.5"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# OpenAPI 文档
+utoipa = { version = "5.3", features = ["axum_extras", "chrono", "uuid"] }
+utoipa-swagger-ui = { version = "9.0", features = ["axum"] }
+utoipa-redoc = { version = "6.0", features = ["axum"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database - SeaORM
+sea-orm = { version = "1.1", features = ["sqlx-postgres", "runtime-tokio-rustls", "macros", "with-chrono", "with-uuid"] }
+sea-orm-migration = { version = "1.1", features = ["sqlx-postgres", "runtime-tokio-rustls"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Utilities
+uuid = { version = "1.10", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+dotenvy = "0.15"
+
+# Auth
+jsonwebtoken = "9.3"
+bcrypt = "0.15"
+
+# Validation
+validator = { version = "0.18", features = ["derive"] }
+

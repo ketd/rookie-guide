@@ -1,0 +1,35 @@
+[package]
+name = "common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Error handling
+anyhow.workspace = true
+thiserror.workspace = true
+
+# Web framework (for API responses)
+axum.workspace = true
+
+# OpenAPI 文档
+utoipa.workspace = true
+
+# Serialization
+serde.workspace = true
+serde_json.workspace = true
+
+# Database
+sea-orm.workspace = true
+
+# Utilities
+uuid.workspace = true
+chrono.workspace = true
+
+# Logging
+tracing.workspace = true
+
+# Config
+dotenvy.workspace = true
+

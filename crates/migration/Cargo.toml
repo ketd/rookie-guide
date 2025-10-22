@@ -1,0 +1,17 @@
+[package]
+name = "migration"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+name = "migration"
+path = "src/lib.rs"
+
+[dependencies]
+# Async runtime
+async-trait.workspace = true
+
+# SeaORM Migration
+sea-orm-migration.workspace = true

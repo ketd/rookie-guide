@@ -1,0 +1,31 @@
+[package]
+name = "auth"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Local crates
+common = { path = "../common" }
+models = { path = "../models" }
+
+# Async runtime
+tokio.workspace = true
+async-trait.workspace = true
+
+# Auth
+jsonwebtoken.workspace = true
+bcrypt.workspace = true
+
+# Utilities
+uuid.workspace = true
+chrono.workspace = true
+serde.workspace = true
+
+# Logging
+tracing.workspace = true
+
+# Error handling
+thiserror.workspace = true
+

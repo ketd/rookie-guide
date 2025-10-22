@@ -1,0 +1,29 @@
+[package]
+name = "db"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Local crates
+common = { path = "../common" }
+models = { path = "../models" }
+
+# Async runtime
+tokio.workspace = true
+async-trait.workspace = true
+
+# Database
+sea-orm.workspace = true
+
+# Serialization
+serde_json.workspace = true
+
+# Utilities
+uuid.workspace = true
+chrono.workspace = true
+
+# Logging
+tracing.workspace = true
+
